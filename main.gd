@@ -1,5 +1,5 @@
 extends Node
-
+#retourner Elève de Teacher0: GAUTIER THOMAS (16 ans)
 var dict = {}
 
 func _ready():
@@ -8,7 +8,10 @@ func _ready():
 	var text = file.get_as_text()
 	dict.parse_json(text)
 	file.close()
-	for prof in dict["teachers"]:
-		for eleve in prof["students"]:
-			print(eleve + " est l'élève de : " + prof["name"])
+	
+	for eleve in dict["students"]:
+		for prof in dict["teachers"]:
+			if eleve["lastname"] in  prof["students"]:
+				print(eleve["lastname"] + " " + eleve["firstname"] + " est l'élève de " + prof["name"] + " et il a " + str(eleve["age"]) + " ans!")
+			
 		
