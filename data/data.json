@@ -1,0 +1,36 @@
+{
+    "students":[
+        {
+            "lastname":"GAUTIER",
+            "firstname":"THOMAS",
+            "age":16
+        },
+        {
+            "lastname":"SARRUS",
+            "firstname":"PIERRE",
+            "age":15
+        },
+        {
+            "lastname":"DUBOIS",
+            "firstname":"JEAN",
+            "age":14
+        },
+        {
+            "lastname":"DURAND",
+            "firstname":"MARIE",
+            "age":13
+        }
+    ],
+    "teachers":[
+        {
+            "name":"Teacher0",
+            "age":35,
+            "students": ["GAUTIER", "SARRUS"]
+        },
+        {
+            "name":"Teacher1",
+            "age":30,
+            "students": ["DUBOIS", "DURAND"]
+        }
+    ]
+}
